@@ -1,0 +1,952 @@
+{
+  "fileKey": "2Ju6RqrBC5he2dLX2AVRoR",
+  "runId": "studymatch-20261001",
+  "scope": "Screens and source component family",
+  "foundation": {
+    "createdNodeIds": [
+      "10:2"
+    ],
+    "mutatedNodeIds": [
+      "0:1"
+    ],
+    "pages": {
+      "screens": "0:1",
+      "components": "10:2"
+    },
+    "collectionId": "VariableCollectionId:10:3",
+    "vars": {
+      "primitive/page": "VariableID:10:4",
+      "color/page": "VariableID:10:5",
+      "primitive/surface": "VariableID:10:6",
+      "color/surface": "VariableID:10:7",
+      "primitive/text": "VariableID:10:8",
+      "color/text": "VariableID:10:9",
+      "primitive/secondary": "VariableID:10:10",
+      "color/secondary": "VariableID:10:11",
+      "primitive/primary": "VariableID:10:12",
+      "color/primary": "VariableID:10:13",
+      "primitive/primary-hover": "VariableID:10:14",
+      "color/primary-hover": "VariableID:10:15",
+      "primitive/border": "VariableID:10:16",
+      "color/border": "VariableID:10:17",
+      "primitive/focus": "VariableID:10:18",
+      "color/focus": "VariableID:10:19",
+      "primitive/light": "VariableID:10:20",
+      "color/light": "VariableID:10:21",
+      "primitive/success": "VariableID:10:22",
+      "color/success": "VariableID:10:23",
+      "primitive/danger-bg": "VariableID:10:24",
+      "color/danger-bg": "VariableID:10:25",
+      "primitive/danger-text": "VariableID:10:26",
+      "color/danger-text": "VariableID:10:27",
+      "primitive/danger-border": "VariableID:10:28",
+      "color/danger-border": "VariableID:10:29",
+      "primitive/success-bg": "VariableID:10:30",
+      "color/success-bg": "VariableID:10:31",
+      "primitive/success-text": "VariableID:10:32",
+      "color/success-text": "VariableID:10:33",
+      "primitive/success-border": "VariableID:10:34",
+      "color/success-border": "VariableID:10:35",
+      "primitive/info-bg": "VariableID:10:36",
+      "color/info-bg": "VariableID:10:37",
+      "primitive/info-text": "VariableID:10:38",
+      "color/info-text": "VariableID:10:39",
+      "primitive/info-border": "VariableID:10:40",
+      "color/info-border": "VariableID:10:41",
+      "space/0": "VariableID:10:42",
+      "space/4": "VariableID:10:43",
+      "space/5": "VariableID:10:44",
+      "space/6": "VariableID:10:45",
+      "space/8": "VariableID:10:46",
+      "space/9": "VariableID:10:47",
+      "space/12": "VariableID:10:48",
+      "space/16": "VariableID:10:49",
+      "space/17": "VariableID:10:50",
+      "space/24": "VariableID:10:51",
+      "space/32": "VariableID:10:52",
+      "space/48": "VariableID:10:53",
+      "radius/0": "VariableID:10:54",
+      "radius/4": "VariableID:10:55",
+      "radius/6": "VariableID:10:56",
+      "radius/8": "VariableID:10:57",
+      "radius/14": "VariableID:10:58",
+      "font/family": "VariableID:10:59"
+    },
+    "styles": {
+      "Body": "S:c98ce2bb9a444df649bf21b2c436cc53d59efa48,",
+      "Body strong": "S:719adf8c5e9d5e1d97fb5e63ad4a8f0591ce8462,",
+      "Label": "S:fc965c3eb001828962107a1b30de7931c298f8fb,",
+      "Small": "S:a849e02b4c0a0053380ebc511b2e1362e65749c2,",
+      "Brand": "S:2e2ce555ce403f508496f3cbf80b3784b33a9931,",
+      "Feature title": "S:98c44d1abf4a20110715312759da81fa613b88ed,",
+      "Lead": "S:3e15abbdb047a91be3de980d24b56f81abd6b14f,",
+      "Heading 3": "S:4b09f0973f7562cbcf8bb706c26afdaee2f62738,",
+      "Heading 3 mobile": "S:42f9f3399c00b08be5382cabced779ea1e9bfccc,",
+      "Heading 1": "S:585c08b6448690b8275a8e424d51fcfcb599c455,",
+      "Heading 1 mobile": "S:4e91f2b77dd058e67362aa10fdf570bdb8beb439,",
+      "Display 5": "S:14343487b57cbb5e226fb3eae40b3d2a875bbdaf,",
+      "Display 5 mobile": "S:b61a4a3870cd499fe9db3da2154ca4e390de031a,",
+      "Badge": "S:17056825d20059e16fde56656ffdf7f03e78c1be,",
+      "Button large": "S:935596272b5fd5021b666a7e934fe47b6314f164,"
+    },
+    "effects": {
+      "card": "S:6eaeb8c031ecf8ca663a0477be841ed75a6187f7,"
+    },
+    "variableCount": 56,
+    "variableIds": [
+      "VariableID:10:4",
+      "VariableID:10:5",
+      "VariableID:10:6",
+      "VariableID:10:7",
+      "VariableID:10:8",
+      "VariableID:10:9",
+      "VariableID:10:10",
+      "VariableID:10:11",
+      "VariableID:10:12",
+      "VariableID:10:13",
+      "VariableID:10:14",
+      "VariableID:10:15",
+      "VariableID:10:16",
+      "VariableID:10:17",
+      "VariableID:10:18",
+      "VariableID:10:19",
+      "VariableID:10:20",
+      "VariableID:10:21",
+      "VariableID:10:22",
+      "VariableID:10:23",
+      "VariableID:10:24",
+      "VariableID:10:25",
+      "VariableID:10:26",
+      "VariableID:10:27",
+      "VariableID:10:28",
+      "VariableID:10:29",
+      "VariableID:10:30",
+      "VariableID:10:31",
+      "VariableID:10:32",
+      "VariableID:10:33",
+      "VariableID:10:34",
+      "VariableID:10:35",
+      "VariableID:10:36",
+      "VariableID:10:37",
+      "VariableID:10:38",
+      "VariableID:10:39",
+      "VariableID:10:40",
+      "VariableID:10:41",
+      "VariableID:10:42",
+      "VariableID:10:43",
+      "VariableID:10:44",
+      "VariableID:10:45",
+      "VariableID:10:46",
+      "VariableID:10:47",
+      "VariableID:10:48",
+      "VariableID:10:49",
+      "VariableID:10:50",
+      "VariableID:10:51",
+      "VariableID:10:52",
+      "VariableID:10:53",
+      "VariableID:10:54",
+      "VariableID:10:55",
+      "VariableID:10:56",
+      "VariableID:10:57",
+      "VariableID:10:58",
+      "VariableID:10:59"
+    ],
+    "font": "Noto Sans"
+  },
+  "completed": [
+    "discovery",
+    "foundations",
+    "basic components"
+  ],
+  "pending": [
+    "composite components",
+    "screens",
+    "visual review"
+  ],
+  "basic": {
+    "createdNodeIds": [
+      "11:2",
+      "11:3",
+      "11:4",
+      "11:6",
+      "11:8",
+      "11:9",
+      "11:10",
+      "11:12",
+      "11:14",
+      "11:15",
+      "11:16",
+      "11:18",
+      "11:20",
+      "11:21",
+      "11:22",
+      "11:24",
+      "11:26",
+      "11:27",
+      "11:28",
+      "11:30",
+      "11:32",
+      "11:33",
+      "11:34",
+      "11:36",
+      "11:38",
+      "11:39",
+      "11:40",
+      "11:41",
+      "11:42",
+      "11:43",
+      "11:47",
+      "11:48",
+      "11:49",
+      "11:50",
+      "11:51",
+      "11:52",
+      "11:53",
+      "11:54",
+      "11:55",
+      "11:56",
+      "11:57",
+      "11:58",
+      "11:59",
+      "11:60",
+      "11:61",
+      "11:62",
+      "11:63",
+      "11:64",
+      "11:65",
+      "11:66",
+      "11:67",
+      "11:68",
+      "11:69",
+      "11:70",
+      "11:71",
+      "11:72",
+      "11:73",
+      "11:74",
+      "11:75",
+      "11:76",
+      "11:77",
+      "11:78",
+      "11:79",
+      "11:80"
+    ],
+    "registry": {
+      "Button": {
+        "id": "11:38",
+        "variants": [
+          {
+            "id": "11:2",
+            "name": "Style=Primary, Size=Small, Element=Link, State=Default",
+            "width": 93,
+            "height": 42
+          },
+          {
+            "id": "11:4",
+            "name": "Style=Primary, Size=Small, Element=Link, State=Hover",
+            "width": 93,
+            "height": 42
+          },
+          {
+            "id": "11:6",
+            "name": "Style=Primary, Size=Small, Element=Link, State=Disabled",
+            "width": 93,
+            "height": 42
+          },
+          {
+            "id": "11:8",
+            "name": "Style=Primary, Size=Medium, Element=Button, State=Default",
+            "width": 126,
+            "height": 42
+          },
+          {
+            "id": "11:10",
+            "name": "Style=Primary, Size=Medium, Element=Button, State=Hover",
+            "width": 126,
+            "height": 42
+          },
+          {
+            "id": "11:12",
+            "name": "Style=Primary, Size=Medium, Element=Button, State=Disabled",
+            "width": 126,
+            "height": 42
+          },
+          {
+            "id": "11:14",
+            "name": "Style=Primary, Size=Large, Element=Link, State=Default",
+            "width": 155,
+            "height": 48
+          },
+          {
+            "id": "11:16",
+            "name": "Style=Primary, Size=Large, Element=Link, State=Hover",
+            "width": 155,
+            "height": 48
+          },
+          {
+            "id": "11:18",
+            "name": "Style=Primary, Size=Large, Element=Link, State=Disabled",
+            "width": 155,
+            "height": 48
+          },
+          {
+            "id": "11:20",
+            "name": "Style=Outline light, Size=Small, Element=Link, State=Default",
+            "width": 107,
+            "height": 44
+          },
+          {
+            "id": "11:22",
+            "name": "Style=Outline light, Size=Small, Element=Link, State=Hover",
+            "width": 107,
+            "height": 44
+          },
+          {
+            "id": "11:24",
+            "name": "Style=Outline light, Size=Small, Element=Link, State=Disabled",
+            "width": 107,
+            "height": 44
+          },
+          {
+            "id": "11:26",
+            "name": "Style=Outline light, Size=Small, Element=Button, State=Default",
+            "width": 108,
+            "height": 44
+          },
+          {
+            "id": "11:28",
+            "name": "Style=Outline light, Size=Small, Element=Button, State=Hover",
+            "width": 108,
+            "height": 44
+          },
+          {
+            "id": "11:30",
+            "name": "Style=Outline light, Size=Small, Element=Button, State=Disabled",
+            "width": 108,
+            "height": 44
+          },
+          {
+            "id": "11:32",
+            "name": "Style=Outline primary, Size=Large, Element=Link, State=Default",
+            "width": 160,
+            "height": 50
+          },
+          {
+            "id": "11:34",
+            "name": "Style=Outline primary, Size=Large, Element=Link, State=Hover",
+            "width": 160,
+            "height": 50
+          },
+          {
+            "id": "11:36",
+            "name": "Style=Outline primary, Size=Large, Element=Link, State=Disabled",
+            "width": 160,
+            "height": 50
+          }
+        ]
+      },
+      "Input": {
+        "id": "11:47",
+        "variants": [
+          {
+            "id": "11:39",
+            "name": "State=Default",
+            "width": 478,
+            "height": 76
+          },
+          {
+            "id": "11:43",
+            "name": "State=Focus",
+            "width": 478,
+            "height": 76
+          }
+        ]
+      },
+      "Alert": {
+        "id": "11:54",
+        "variants": [
+          {
+            "id": "11:48",
+            "name": "Tone=danger",
+            "width": 478,
+            "height": 60
+          },
+          {
+            "id": "11:50",
+            "name": "Tone=success",
+            "width": 478,
+            "height": 60
+          },
+          {
+            "id": "11:52",
+            "name": "Tone=info",
+            "width": 478,
+            "height": 84
+          }
+        ]
+      },
+      "Badge": {
+        "id": "11:59",
+        "variants": [
+          {
+            "id": "11:55",
+            "name": "Tone=primary",
+            "width": 87.5999984741211,
+            "height": 20.399999618530273
+          },
+          {
+            "id": "11:57",
+            "name": "Tone=success",
+            "width": 92.5999984741211,
+            "height": 20.399999618530273
+          }
+        ]
+      },
+      "Feature": {
+        "id": "11:60",
+        "width": 311.3299865722656,
+        "height": 112
+      },
+      "ProfileRow": {
+        "id": "11:63"
+      },
+      "Link": {
+        "id": "11:66"
+      },
+      "Loading": {
+        "id": "11:68"
+      },
+      "AuthCard": {
+        "id": "11:80",
+        "variants": [
+          {
+            "id": "11:70",
+            "name": "Device=Desktop",
+            "width": 526,
+            "height": 121
+          },
+          {
+            "id": "11:75",
+            "name": "Device=Mobile",
+            "width": 366,
+            "height": 121
+          }
+        ]
+      }
+    },
+    "buttons": {
+      "Primary|Small|Link|Default": "11:2",
+      "Primary|Small|Link|Hover": "11:4",
+      "Primary|Small|Link|Disabled": "11:6",
+      "Primary|Medium|Button|Default": "11:8",
+      "Primary|Medium|Button|Hover": "11:10",
+      "Primary|Medium|Button|Disabled": "11:12",
+      "Primary|Large|Link|Default": "11:14",
+      "Primary|Large|Link|Hover": "11:16",
+      "Primary|Large|Link|Disabled": "11:18",
+      "Outline light|Small|Link|Default": "11:20",
+      "Outline light|Small|Link|Hover": "11:22",
+      "Outline light|Small|Link|Disabled": "11:24",
+      "Outline light|Small|Button|Default": "11:26",
+      "Outline light|Small|Button|Hover": "11:28",
+      "Outline light|Small|Button|Disabled": "11:30",
+      "Outline primary|Large|Link|Default": "11:32",
+      "Outline primary|Large|Link|Hover": "11:34",
+      "Outline primary|Large|Link|Disabled": "11:36"
+    },
+    "alerts": {
+      "danger": "11:48",
+      "success": "11:50",
+      "info": "11:52"
+    },
+    "badges": {
+      "primary": "11:55",
+      "success": "11:57"
+    },
+    "fields": {
+      "Default": "11:39",
+      "Focus": "11:43"
+    },
+    "authCards": {
+      "Desktop": "11:70",
+      "Mobile": "11:75"
+    },
+    "componentCount": 31,
+    "sets": [
+      {
+        "id": "11:38",
+        "variants": 18
+      },
+      {
+        "id": "11:47",
+        "variants": 2
+      },
+      {
+        "id": "11:54",
+        "variants": 3
+      },
+      {
+        "id": "11:59",
+        "variants": 2
+      },
+      {
+        "id": "11:80",
+        "variants": 2
+      }
+    ],
+    "errors": []
+  },
+  "status": "complete",
+  "fallback": "Local plugin prepared; not executed in Figma",
+  "resumedAt": "2026-10-08",
+  "resumeEvidence": {
+    "pages": [
+      {
+        "id": "0:1",
+        "name": "01 · Pantallas"
+      },
+      {
+        "id": "10:2",
+        "name": "02 · Componentes"
+      }
+    ],
+    "newSourceScreen": "NewStudy: /new-study, nombre, modalidad, cupo, Enviar; enlace desde Dashboard",
+    "remoteBuild": "No se crearon componentes compuestos. El primer intento falló al ajustar strokesIncludedInLayout en un componente sin Auto Layout; el reintento corregido fue rechazado por límite Starter.",
+    "blocker": "Figma MCP Starter tool call limit; Windows native pipe unavailable; browser inventory empty",
+    "alternatePlan": "whoami devuelve también equipo Diego, tier student, asiento Full. No se cambió la ubicación, propiedad ni acceso del archivo.",
+    "pending": [
+      "Ejecutar generador",
+      "Comparar capturas con el código actual",
+      "Validar visualmente componentes y pantallas",
+      "Confirmar cambios previos de base al reanudar"
+    ],
+    "expectedScreens": 21,
+    "generatorExecuted": false,
+    "generatorValidation": "Sintaxis JavaScript comprobada; ejecución y revisión visual pendientes",
+    "blockerResolved": true
+  },
+  "completedAt": "2026-10-08",
+  "components": {
+    "registry": {
+      "Navbar": {
+        "id": "21:31",
+        "variants": [
+          {
+            "id": "21:2",
+            "name": "Device=Desktop, Session=Guest",
+            "width": 1440,
+            "height": 58
+          },
+          {
+            "id": "21:10",
+            "name": "Device=Desktop, Session=Authenticated",
+            "width": 1440,
+            "height": 58
+          },
+          {
+            "id": "21:17",
+            "name": "Device=Mobile, Session=Guest",
+            "width": 390,
+            "height": 58
+          },
+          {
+            "id": "21:25",
+            "name": "Device=Mobile, Session=Authenticated",
+            "width": 390,
+            "height": 58
+          }
+        ]
+      },
+      "HeroCard": {
+        "id": "21:76",
+        "variants": [
+          {
+            "id": "21:32",
+            "name": "Device=Desktop, Session=Guest",
+            "width": 966,
+            "height": 369.20001220703125
+          },
+          {
+            "id": "21:44",
+            "name": "Device=Desktop, Session=Authenticated",
+            "width": 966,
+            "height": 361.20001220703125
+          },
+          {
+            "id": "21:54",
+            "name": "Device=Mobile, Session=Guest",
+            "width": 366,
+            "height": 433.20001220703125
+          },
+          {
+            "id": "21:66",
+            "name": "Device=Mobile, Session=Authenticated",
+            "width": 366,
+            "height": 369.20001220703125
+          }
+        ]
+      },
+      "DashboardCard": {
+        "id": "21:125",
+        "variants": [
+          {
+            "id": "21:77",
+            "name": "Device=Desktop",
+            "width": 856,
+            "height": 509.20001220703125
+          },
+          {
+            "id": "21:101",
+            "name": "Device=Mobile",
+            "width": 366,
+            "height": 495.20001220703125
+          }
+        ]
+      },
+      "AccessForm": {
+        "id": "21:427",
+        "variants": [
+          {
+            "id": "21:126",
+            "name": "Device=Desktop, Form=Login, State=Default",
+            "width": 526,
+            "height": 436
+          },
+          {
+            "id": "21:149",
+            "name": "Device=Desktop, Form=Register, State=Default",
+            "width": 526,
+            "height": 488
+          },
+          {
+            "id": "21:173",
+            "name": "Device=Desktop, Form=Recover, State=Default",
+            "width": 526,
+            "height": 328
+          },
+          {
+            "id": "21:188",
+            "name": "Device=Desktop, Form=NewStudy, State=Default",
+            "width": 526,
+            "height": 456
+          },
+          {
+            "id": "21:210",
+            "name": "Device=Desktop, Form=Change, State=Default",
+            "width": 526,
+            "height": 494
+          },
+          {
+            "id": "21:231",
+            "name": "Device=Mobile, Form=Login, State=Default",
+            "width": 366,
+            "height": 430
+          },
+          {
+            "id": "21:254",
+            "name": "Device=Mobile, Form=Register, State=Default",
+            "width": 366,
+            "height": 506
+          },
+          {
+            "id": "21:278",
+            "name": "Device=Mobile, Form=Recover, State=Default",
+            "width": 366,
+            "height": 346
+          },
+          {
+            "id": "21:293",
+            "name": "Device=Mobile, Form=NewStudy, State=Default",
+            "width": 366,
+            "height": 450
+          },
+          {
+            "id": "21:315",
+            "name": "Device=Mobile, Form=Change, State=Default",
+            "width": 366,
+            "height": 512
+          },
+          {
+            "id": "21:336",
+            "name": "Device=Desktop, Form=Login, State=Error",
+            "width": 526,
+            "height": 510
+          },
+          {
+            "id": "21:361",
+            "name": "Device=Desktop, Form=Login, State=Loading",
+            "width": 526,
+            "height": 436
+          },
+          {
+            "id": "21:384",
+            "name": "Device=Desktop, Form=Register, State=Success",
+            "width": 526,
+            "height": 586
+          },
+          {
+            "id": "21:410",
+            "name": "Device=Desktop, Form=Recover, State=Success",
+            "width": 526,
+            "height": 426
+          }
+        ]
+      }
+    },
+    "navbars": {
+      "Desktop|Guest": "21:2",
+      "Desktop|Authenticated": "21:10",
+      "Mobile|Guest": "21:17",
+      "Mobile|Authenticated": "21:25"
+    },
+    "heroes": {
+      "Desktop|Guest": "21:32",
+      "Desktop|Authenticated": "21:44",
+      "Mobile|Guest": "21:54",
+      "Mobile|Authenticated": "21:66"
+    },
+    "dashboards": {
+      "Desktop": "21:77",
+      "Mobile": "21:101"
+    },
+    "forms": {
+      "Desktop|Login|Default": "21:126",
+      "Desktop|Register|Default": "21:149",
+      "Desktop|Recover|Default": "21:173",
+      "Desktop|NewStudy|Default": "21:188",
+      "Desktop|Change|Default": "21:210",
+      "Mobile|Login|Default": "21:231",
+      "Mobile|Register|Default": "21:254",
+      "Mobile|Recover|Default": "21:278",
+      "Mobile|NewStudy|Default": "21:293",
+      "Mobile|Change|Default": "21:315",
+      "Desktop|Login|Error": "21:336",
+      "Desktop|Login|Loading": "21:361",
+      "Desktop|Register|Success": "21:384",
+      "Desktop|Recover|Success": "21:410"
+    },
+    "catalog": "21:428"
+  },
+  "screens": [
+    {
+      "id": "22:2",
+      "name": "Desktop · Inicio público",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:17"
+    },
+    {
+      "id": "22:42",
+      "name": "Desktop · Iniciar sesión",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:54"
+    },
+    {
+      "id": "22:86",
+      "name": "Desktop · Registro",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:98"
+    },
+    {
+      "id": "22:133",
+      "name": "Desktop · Recuperar contraseña",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:145"
+    },
+    {
+      "id": "22:165",
+      "name": "Desktop · Cambiar contraseña · código simulado",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:177"
+    },
+    {
+      "id": "22:207",
+      "name": "Desktop · Panel privado",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:219"
+    },
+    {
+      "id": "22:252",
+      "name": "Desktop · Inicio autenticado",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:264"
+    },
+    {
+      "id": "22:286",
+      "name": "Desktop · Nueva sesion de estudio",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:297"
+    },
+    {
+      "id": "22:330",
+      "name": "Mobile · Inicio público",
+      "device": "Mobile",
+      "width": 390,
+      "height": 987.2000122070312,
+      "primaryId": "22:345"
+    },
+    {
+      "id": "22:370",
+      "name": "Mobile · Iniciar sesión",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:382"
+    },
+    {
+      "id": "22:414",
+      "name": "Mobile · Registro",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:426"
+    },
+    {
+      "id": "22:461",
+      "name": "Mobile · Recuperar contraseña",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:473"
+    },
+    {
+      "id": "22:493",
+      "name": "Mobile · Cambiar contraseña · código simulado",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:505"
+    },
+    {
+      "id": "22:535",
+      "name": "Mobile · Panel privado",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:546"
+    },
+    {
+      "id": "22:579",
+      "name": "Mobile · Inicio autenticado",
+      "device": "Mobile",
+      "width": 390,
+      "height": 923.2000122070312,
+      "primaryId": "22:590"
+    },
+    {
+      "id": "22:612",
+      "name": "Mobile · Nueva sesion de estudio",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:622"
+    },
+    {
+      "id": "22:655",
+      "name": "Desktop · Login · credenciales incorrectas",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:667"
+    },
+    {
+      "id": "22:702",
+      "name": "Desktop · Login · ingresando",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:714"
+    },
+    {
+      "id": "22:746",
+      "name": "Desktop · Registro · cuenta creada",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:758"
+    },
+    {
+      "id": "22:796",
+      "name": "Desktop · Recuperación · contraseña cambiada",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:808"
+    },
+    {
+      "id": "22:831",
+      "name": "Desktop · Validando sesión",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:842"
+    }
+  ],
+  "completedSteps": [
+    "discovery",
+    "foundations",
+    "basic-components",
+    "composite-components",
+    "screens",
+    "structural-review",
+    "visual-review"
+  ],
+  "pendingValidations": [],
+  "pendingSteps": [],
+  "finalValidation": {
+    "screenCount": 21,
+    "allTextFont": "Noto Sans",
+    "completeUIRasterCount": 0,
+    "textHeightErrors": 0,
+    "overflowErrors": 0,
+    "sourceComparison": "Inicio contrastado con captura local; diferencia tipografica autorizada",
+    "captureRemoved": [
+      "27:698",
+      "27:700",
+      "27:699"
+    ],
+    "frontendIndexRestored": true,
+    "viteStopped": true,
+    "backendExecutionValidated": false
+  },
+  "finalFixes": {
+    "footerSpacing": [
+      "21:145",
+      "21:169",
+      "21:250",
+      "21:274",
+      "21:357",
+      "21:380",
+      "21:406"
+    ],
+    "badgeLabel": [
+      "21:79",
+      "21:103",
+      "21:491"
+    ],
+    "authTitleHeight": [
+      "11:72",
+      "11:77"
+    ],
+    "accessFormTitles": "Se retiraron Title#21:44 y Subtitle#21:45 de AccessForm para conservar texto propio de cada variante."
+  },
+  "limitations": [
+    "Noto Sans cambia metricas respecto de la fuente del codigo",
+    "Datos personales y codigo de recuperacion de ejemplo",
+    "No se valido ejecucion del backend"
+  ]
+}

@@ -1,15 +1,51 @@
-# Python
+# Backend: entornos virtuales
 backend/venv/
+backend/.venv/
+backend/env/
+
+# Backend: archivos generados por Python
 __pycache__/
 *.pyc
+*.pyo
 
-# Node
+# Backend: compilación y empaquetado
+backend/build/
+backend/dist/
+*.egg-info/
+
+# Backend: cachés y resultados de pruebas
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Frontend: dependencias y compilación
 frontend/node_modules/
 frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+frontend/coverage/
+*.tsbuildinfo
 
-# IDE
+# Variables de entorno locales
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Registros de ejecución
+*.log
+
+# Configuración personal del editor
 .vscode/
 .idea/
+proyecto_2.code-workspace
 
-# Environment
-.env
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+

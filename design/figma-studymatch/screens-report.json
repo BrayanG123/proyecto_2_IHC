@@ -1,0 +1,526 @@
+{
+  "fileKey": "2Ju6RqrBC5he2dLX2AVRoR",
+  "generatedAt": "2026-10-08T16:07:18.358Z",
+  "screens": [
+    {
+      "id": "22:2",
+      "name": "Desktop · Inicio público",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:17"
+    },
+    {
+      "id": "22:42",
+      "name": "Desktop · Iniciar sesión",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:54"
+    },
+    {
+      "id": "22:86",
+      "name": "Desktop · Registro",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:98"
+    },
+    {
+      "id": "22:133",
+      "name": "Desktop · Recuperar contraseña",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:145"
+    },
+    {
+      "id": "22:165",
+      "name": "Desktop · Cambiar contraseña · código simulado",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:177"
+    },
+    {
+      "id": "22:207",
+      "name": "Desktop · Panel privado",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:219"
+    },
+    {
+      "id": "22:252",
+      "name": "Desktop · Inicio autenticado",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:264"
+    },
+    {
+      "id": "22:286",
+      "name": "Desktop · Nueva sesion de estudio",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:297"
+    },
+    {
+      "id": "22:330",
+      "name": "Mobile · Inicio público",
+      "device": "Mobile",
+      "width": 390,
+      "height": 987.2000122070312,
+      "primaryId": "22:345"
+    },
+    {
+      "id": "22:370",
+      "name": "Mobile · Iniciar sesión",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:382"
+    },
+    {
+      "id": "22:414",
+      "name": "Mobile · Registro",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:426"
+    },
+    {
+      "id": "22:461",
+      "name": "Mobile · Recuperar contraseña",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:473"
+    },
+    {
+      "id": "22:493",
+      "name": "Mobile · Cambiar contraseña · código simulado",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:505"
+    },
+    {
+      "id": "22:535",
+      "name": "Mobile · Panel privado",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:546"
+    },
+    {
+      "id": "22:579",
+      "name": "Mobile · Inicio autenticado",
+      "device": "Mobile",
+      "width": 390,
+      "height": 923.2000122070312,
+      "primaryId": "22:590"
+    },
+    {
+      "id": "22:612",
+      "name": "Mobile · Nueva sesion de estudio",
+      "device": "Mobile",
+      "width": 390,
+      "height": 844,
+      "primaryId": "22:622"
+    },
+    {
+      "id": "22:655",
+      "name": "Desktop · Login · credenciales incorrectas",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:667"
+    },
+    {
+      "id": "22:702",
+      "name": "Desktop · Login · ingresando",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:714"
+    },
+    {
+      "id": "22:746",
+      "name": "Desktop · Registro · cuenta creada",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:758"
+    },
+    {
+      "id": "22:796",
+      "name": "Desktop · Recuperación · contraseña cambiada",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:808"
+    },
+    {
+      "id": "22:831",
+      "name": "Desktop · Validando sesión",
+      "device": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "primaryId": "22:842"
+    }
+  ],
+  "components": {
+    "registry": {
+      "Navbar": {
+        "id": "21:31",
+        "variants": [
+          {
+            "id": "21:2",
+            "name": "Device=Desktop, Session=Guest",
+            "width": 1440,
+            "height": 58
+          },
+          {
+            "id": "21:10",
+            "name": "Device=Desktop, Session=Authenticated",
+            "width": 1440,
+            "height": 58
+          },
+          {
+            "id": "21:17",
+            "name": "Device=Mobile, Session=Guest",
+            "width": 390,
+            "height": 58
+          },
+          {
+            "id": "21:25",
+            "name": "Device=Mobile, Session=Authenticated",
+            "width": 390,
+            "height": 58
+          }
+        ]
+      },
+      "HeroCard": {
+        "id": "21:76",
+        "variants": [
+          {
+            "id": "21:32",
+            "name": "Device=Desktop, Session=Guest",
+            "width": 966,
+            "height": 369.20001220703125
+          },
+          {
+            "id": "21:44",
+            "name": "Device=Desktop, Session=Authenticated",
+            "width": 966,
+            "height": 361.20001220703125
+          },
+          {
+            "id": "21:54",
+            "name": "Device=Mobile, Session=Guest",
+            "width": 366,
+            "height": 433.20001220703125
+          },
+          {
+            "id": "21:66",
+            "name": "Device=Mobile, Session=Authenticated",
+            "width": 366,
+            "height": 369.20001220703125
+          }
+        ]
+      },
+      "DashboardCard": {
+        "id": "21:125",
+        "variants": [
+          {
+            "id": "21:77",
+            "name": "Device=Desktop",
+            "width": 856,
+            "height": 509.20001220703125
+          },
+          {
+            "id": "21:101",
+            "name": "Device=Mobile",
+            "width": 366,
+            "height": 495.20001220703125
+          }
+        ]
+      },
+      "AccessForm": {
+        "id": "21:427",
+        "variants": [
+          {
+            "id": "21:126",
+            "name": "Device=Desktop, Form=Login, State=Default",
+            "width": 526,
+            "height": 436
+          },
+          {
+            "id": "21:149",
+            "name": "Device=Desktop, Form=Register, State=Default",
+            "width": 526,
+            "height": 488
+          },
+          {
+            "id": "21:173",
+            "name": "Device=Desktop, Form=Recover, State=Default",
+            "width": 526,
+            "height": 328
+          },
+          {
+            "id": "21:188",
+            "name": "Device=Desktop, Form=NewStudy, State=Default",
+            "width": 526,
+            "height": 456
+          },
+          {
+            "id": "21:210",
+            "name": "Device=Desktop, Form=Change, State=Default",
+            "width": 526,
+            "height": 494
+          },
+          {
+            "id": "21:231",
+            "name": "Device=Mobile, Form=Login, State=Default",
+            "width": 366,
+            "height": 430
+          },
+          {
+            "id": "21:254",
+            "name": "Device=Mobile, Form=Register, State=Default",
+            "width": 366,
+            "height": 506
+          },
+          {
+            "id": "21:278",
+            "name": "Device=Mobile, Form=Recover, State=Default",
+            "width": 366,
+            "height": 346
+          },
+          {
+            "id": "21:293",
+            "name": "Device=Mobile, Form=NewStudy, State=Default",
+            "width": 366,
+            "height": 450
+          },
+          {
+            "id": "21:315",
+            "name": "Device=Mobile, Form=Change, State=Default",
+            "width": 366,
+            "height": 512
+          },
+          {
+            "id": "21:336",
+            "name": "Device=Desktop, Form=Login, State=Error",
+            "width": 526,
+            "height": 510
+          },
+          {
+            "id": "21:361",
+            "name": "Device=Desktop, Form=Login, State=Loading",
+            "width": 526,
+            "height": 436
+          },
+          {
+            "id": "21:384",
+            "name": "Device=Desktop, Form=Register, State=Success",
+            "width": 526,
+            "height": 586
+          },
+          {
+            "id": "21:410",
+            "name": "Device=Desktop, Form=Recover, State=Success",
+            "width": 526,
+            "height": 426
+          }
+        ]
+      }
+    },
+    "navbars": {
+      "Desktop|Guest": "21:2",
+      "Desktop|Authenticated": "21:10",
+      "Mobile|Guest": "21:17",
+      "Mobile|Authenticated": "21:25"
+    },
+    "heroes": {
+      "Desktop|Guest": "21:32",
+      "Desktop|Authenticated": "21:44",
+      "Mobile|Guest": "21:54",
+      "Mobile|Authenticated": "21:66"
+    },
+    "dashboards": {
+      "Desktop": "21:77",
+      "Mobile": "21:101"
+    },
+    "forms": {
+      "Desktop|Login|Default": "21:126",
+      "Desktop|Register|Default": "21:149",
+      "Desktop|Recover|Default": "21:173",
+      "Desktop|NewStudy|Default": "21:188",
+      "Desktop|Change|Default": "21:210",
+      "Mobile|Login|Default": "21:231",
+      "Mobile|Register|Default": "21:254",
+      "Mobile|Recover|Default": "21:278",
+      "Mobile|NewStudy|Default": "21:293",
+      "Mobile|Change|Default": "21:315",
+      "Desktop|Login|Error": "21:336",
+      "Desktop|Login|Loading": "21:361",
+      "Desktop|Register|Success": "21:384",
+      "Desktop|Recover|Success": "21:410"
+    },
+    "catalog": "21:428"
+  },
+  "createdNodeIds": [
+    "22:2",
+    "22:3",
+    "22:4",
+    "22:14",
+    "22:15",
+    "22:16",
+    "22:17",
+    "22:32",
+    "22:33",
+    "22:36",
+    "22:39",
+    "22:42",
+    "22:43",
+    "22:44",
+    "22:52",
+    "22:53",
+    "22:54",
+    "22:86",
+    "22:87",
+    "22:88",
+    "22:96",
+    "22:97",
+    "22:98",
+    "22:133",
+    "22:134",
+    "22:135",
+    "22:143",
+    "22:144",
+    "22:145",
+    "22:165",
+    "22:166",
+    "22:167",
+    "22:175",
+    "22:176",
+    "22:177",
+    "22:207",
+    "22:208",
+    "22:209",
+    "22:217",
+    "22:218",
+    "22:219",
+    "22:252",
+    "22:253",
+    "22:254",
+    "22:261",
+    "22:262",
+    "22:263",
+    "22:264",
+    "22:276",
+    "22:277",
+    "22:280",
+    "22:283",
+    "22:286",
+    "22:287",
+    "22:288",
+    "22:295",
+    "22:296",
+    "22:297",
+    "22:330",
+    "22:331",
+    "22:332",
+    "22:342",
+    "22:343",
+    "22:344",
+    "22:345",
+    "22:360",
+    "22:361",
+    "22:364",
+    "22:367",
+    "22:370",
+    "22:371",
+    "22:372",
+    "22:380",
+    "22:381",
+    "22:382",
+    "22:414",
+    "22:415",
+    "22:416",
+    "22:424",
+    "22:425",
+    "22:426",
+    "22:461",
+    "22:462",
+    "22:463",
+    "22:471",
+    "22:472",
+    "22:473",
+    "22:493",
+    "22:494",
+    "22:495",
+    "22:503",
+    "22:504",
+    "22:505",
+    "22:535",
+    "22:536",
+    "22:537",
+    "22:544",
+    "22:545",
+    "22:546",
+    "22:579",
+    "22:580",
+    "22:581",
+    "22:587",
+    "22:588",
+    "22:589",
+    "22:590",
+    "22:602",
+    "22:603",
+    "22:606",
+    "22:609",
+    "22:612",
+    "22:613",
+    "22:614",
+    "22:620",
+    "22:621",
+    "22:622",
+    "22:655",
+    "22:656",
+    "22:657",
+    "22:665",
+    "22:666",
+    "22:667",
+    "22:702",
+    "22:703",
+    "22:704",
+    "22:712",
+    "22:713",
+    "22:714",
+    "22:746",
+    "22:747",
+    "22:748",
+    "22:756",
+    "22:757",
+    "22:758",
+    "22:796",
+    "22:797",
+    "22:798",
+    "22:806",
+    "22:807",
+    "22:808",
+    "22:831",
+    "22:832",
+    "22:833",
+    "22:840",
+    "22:841",
+    "22:842"
+  ],
+  "mutatedNodeIds": [],
+  "font": "Noto Sans (authorized difference; application code unchanged)",
+  "layout": "Auto Layout and Wrap; native STRETCH constraints on each Page flow; Fill/Hug sizing inside."
+}

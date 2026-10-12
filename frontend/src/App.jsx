@@ -137,11 +137,6 @@ function Home({ user }) {
           </div>
         </div>
 
-        <div className="row g-3 mt-3">
-          <Feature title="Registro" text="Crea una cuenta nueva con tu nombre, correo y contraseña." />
-          <Feature title="Sesión persistente" text="La sesión se conserva aunque recargues la aplicación." />
-          <Feature title="Ruta privada" text="Tu panel requiere una sesión autenticada para entrar." />
-        </div>
       </div>
     </div>
   );
@@ -365,6 +360,11 @@ function Dashboard({ user }) {
             <div className="alert alert-info mt-4 mb-0">
               Si recargas esta página, StudyMatch vuelve a validar tu token y conserva la sesión mientras sea válido.
             </div>
+
+            <p className="text-center mt-3 mb-0">
+            <Link to="/new-study">Crear nueva sesion</Link>
+          </p>
+
           </div>
         </div>
       </div>
@@ -445,6 +445,7 @@ function AppContent() {
         <Route path="/login" element={<Login onLogin={setUser} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/recover" element={<Recover />} />
+        <Route path="/new-study" element={<CreateSesion />} />
         <Route
           path="/dashboard"
           element={
@@ -458,6 +459,114 @@ function AppContent() {
     </Layout>
   );
 }
+
+function CreateSesion() {
+  const [nombre, setNombre] = useState("");
+  const [modalidad, setModalidad] = useState("");
+  const [cupo, setCupo] = useState(0);
+  const [fecha, setFecha] = useState("");
+  const [inscripciones, setInscripciones] = useState(false);
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
+
+  async function createNew(event) {
+    event.preventDefault();
+    setError("");
+    setMessage("");
+
+    try {
+      const data = await apiRequest("/guardar-nuevo", {
+        method: "POST",
+        body: JSON.stringify({ nombre, modalidad, cupo, fecha, inscripciones }),
+      });
+      setMessage(`${data.mensaje} registrado exitosamente.`);
+      setNombre("");
+      setModalidad("");
+      setCupo(0);
+      setFecha("");
+      setInscripciones(false);
+    } catch (err) {
+      setError(err.message);
+    }
+  }
+
+  return (
+    <AuthCard title="Nueva sesion de estudio" 
+    >
+      {error && <Alert type="danger" text={error} />}
+      {message && <Alert type="success" text={message} />}
+
+      <form onSubmit={createNew}>
+        <Input 
+            label="nombre" 
+            value={nombre} 
+            type="text"
+            onChange={(e) => setNombre(e.target.value)}  
+            required 
+        />
+        
+        <Input 
+            label="modalidad" 
+            value={modalidad} 
+            type="text"
+            onChange={(e) => setModalidad(e.target.value)}  
+            required 
+        />
+        <Input 
+            label="cupo" 
+            value={cupo} 
+            type="number"
+            onChange={(e) => setCupo(e.target.value)}  
+            required 
+        />
+
+        <Input 
+            label="fecha" 
+            type="date"
+            value={fecha} 
+            onChange={(e) => setFecha(e.target.value)} 
+            required 
+        />
+        <label >Inscripciones:</label>
+        <br />
+        <label>
+          <input
+            name="checkdeinscripciones"
+            type="radio"
+            value="valorAbiertas"
+            checked={inscripciones===true}
+            onChange={(e) => setInscripciones(true)}
+          >
+          </input>
+          Abiertas     
+        </label>
+
+        <label>
+          <input
+            name="checkdeinscripciones"
+            type="radio"
+            value="valorCerradas"
+            checked={inscripciones===false}
+            onChange={(e) => setInscripciones(false)}
+          >
+          </input>
+          Cerradas
+        </label>
+
+
+
+
+        <button className="btn btn-primary w-100">Enviar</button>
+      </form>
+
+      <p className="text-center mt-3 mb-0">
+        <Link to="/login">Volver al inicio de sesión</Link>
+      </p>
+    </AuthCard>
+  );
+}
+
 
 export default function App() {
   return (
