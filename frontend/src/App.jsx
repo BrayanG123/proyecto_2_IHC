@@ -465,7 +465,7 @@ function CreateSesion() {
   const [modalidad, setModalidad] = useState("");
   const [cupo, setCupo] = useState(0);
   const [fecha, setFecha] = useState("");
-  const [inscripciones, setInscripciones] = useState(false);
+  const [inscripciones, setInscripciones] = useState(true);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
@@ -485,7 +485,7 @@ function CreateSesion() {
       setModalidad("");
       setCupo(0);
       setFecha("");
-      setInscripciones(false);
+      setInscripciones(true);
     } catch (err) {
       setError(err.message);
     }
