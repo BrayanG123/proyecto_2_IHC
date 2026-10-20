@@ -2,9 +2,15 @@
 
 
 
-from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, String
+from datetime import datetime, timezone
+
+from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, String, DateTime
 
 from app.database import Base
+
+
+def fecha_inscripcion_actual():
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 
 class Usuario(Base):
@@ -35,4 +41,11 @@ class Inscripcion(Base):
     __tablename__ = "inscriprciones"
 
     usuario_id = Column(Integer, ForeignKey("usuarios.id"),primary_key=True)
+
     sesion_id = Column(Integer, ForeignKey("sesiones.id"), primary_key=True)
+
+    fecha_inscripcion = Column(
+        DateTime,
+        nullable=True,
+        default=fecha_inscripcion_actual,
+    )

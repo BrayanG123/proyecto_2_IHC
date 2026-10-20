@@ -37,13 +37,30 @@ def get_db():
 
 
 def inicializar_db():
+
     from app import modelos_db
+
     Base.metadata.create_all(bind=engine)
 
-    # create_all crea tablas nuevas, pero no agrega columnas a las existentes.
     with engine.begin() as conexion:
-        columnas = [columna["name"] for columna in inspect(conexion).get_columns("sesiones")]
+
+        columnas = [
+            columna["name"] 
+            for columna in inspect(conexion).get_columns("sesiones")
+        ]
+
         if "materia" not in columnas:
             conexion.execute(text(
                 "ALTER TABLE sesiones ADD COLUMN materia TEXT NOT NULL DEFAULT 'General'"
+            ))
+
+        columnas_inscripciones = [
+            columna["name"]
+            for columna in inspect(conexion).get_columns("inscriprciones")
+        ]
+
+        if "fecha_inscripcion" not in columnas_inscripciones:
+            conexion.execute(text(
+                "ALTER TABLE inscriprciones "
+                "ADD COLUMN fecha_inscripcion DATETIME"
             ))
