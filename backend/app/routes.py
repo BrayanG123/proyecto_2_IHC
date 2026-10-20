@@ -17,6 +17,7 @@ from app.repositorio import (
     listar_sesiones,
     buscar_sesiones,
     unirse_a_sesion,
+    obtener_historial
 )
 
 from app.services import (
@@ -239,3 +240,13 @@ def cerrar_inscripciones(
         raise HTTPException(status_code=400, detail=str(error))
     
     return {"mensaje": "Estado de inscripciones modificado correctamente."}
+
+
+
+@router.get("/historial-sesiones")
+def get_historial(
+    db: Session = Depends(get_db),
+    usuario = Depends(obtener_usuario_actual),
+):
+
+    return obtener_historial(db, usuario.id)

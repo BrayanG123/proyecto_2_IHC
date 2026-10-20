@@ -182,3 +182,42 @@ def cerrar_inscripciones(db, sesion_id, usuario_id):
 
     sesion.inscripciones_abiertas = False
     db.commit()
+
+
+def obtener_historial(db, usuario_id):
+
+    consulta = (
+        select(Inscripcion, SesionEstudio)
+        .join(
+            SesionEstudio,
+            Inscripcion.sesion_id == SesionEstudio.id,
+        )
+        .where(Inscripcion.usuario_id == usuario_id)
+        .order_by(
+            Inscripcion.fecha_inscripcion.desc(),
+            SesionEstudio.id.desc(),
+        )
+    )
+
+    historial = []
+
+    for inscripcion, sesion in db.execute(consulta):
+
+        fecha_inscripcion = inscripcion.fecha_inscripcion
+
+        if fecha_inscripcion is not None:
+            fecha_inscripcion = fecha_inscripcion.replace(
+                tzinfo=timezone.utc
+            )
+
+        historial.append({
+            "sesion_id" : sesion.id,
+            "nombre"    : sesion.nombre,
+            "materia"   : sesion.materia,
+            "modalidad" : sesion.modalidad,
+            "fecha_sesion": sesion.fecha,
+            "fecha_inscripcion": fecha_inscripcion,
+            "resultado": "Inscripción registrada",
+        })
+
+    return historial
