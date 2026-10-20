@@ -1,41 +1,18 @@
-
-
-
-from datetime import date
-
-from app.database import sesiones
-
-import unittest
-
-from app.models import SesionDeEstudio
+from sqlalchemy.orm import Session
+from app.modelos_db import SesionEstudio
 from app.routes import crear_sesion
+from tests.base_db import PruebaConBaseDeDatos
 
 
-class PruebaDeEstadoInicial(unittest.TestCase):
-    def setUp(self):
-        self.sesiones_anteriores = sesiones.copy()
-        sesiones.clear()
-
-    def tearDown(self):
-        sesiones.clear()
-        sesiones.update(self.sesiones_anteriores)
-
+class PruebaDeEstadoInicial(PruebaConBaseDeDatos):
     def test_estado_inicial_true(self):
+        resultado = crear_sesion(self.datos_sesion(), self.db, self.usuario)
+        with Session(self.engine) as db:
+            sesion = db.get(SesionEstudio, resultado["id"])
+            self.assertIs(sesion.inscripciones_abiertas, True)
+            self.assertEqual(sesion.cupo, 5)
 
-        data = SesionDeEstudio(
-            nombre="sesion fisica",
-            fecha=date(2026, 10, 20),
-            modalidad="prescencial",
-            cupo="5",
-            inscripciones=True
-        )
-
-        crear_sesion(data)
-
-        sesion_guardada = sesiones["sesion fisica"]
-
-        self.assertIs(
-            sesion_guardada["inscripciones"],
-            True,
-            "la sesion nueva debe qedar con la inscripciones abiertas",
-        )
+    def test_permite_crear_inscripciones_cerradas(self):
+        resultado = crear_sesion(self.datos_sesion(False), self.db, self.usuario)
+        with Session(self.engine) as db:
+            self.assertIs(db.get(SesionEstudio, resultado["id"]).inscripciones_abiertas, False)

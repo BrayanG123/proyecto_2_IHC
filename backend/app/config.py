@@ -19,7 +19,7 @@ ALLOWED_ORIGINS = [
 if getattr(sys, "frozen", False):
     BASE_DIR = Path(sys._MEIPASS)
 else:
-    BASE_DIR = Path(__file__).resolve().parent.parent
+    BASE_DIR = Path(__file__).resolve().parents[2]
 
 FRONTEND_DIR = BASE_DIR / "frontend" / "dist"
 INDEX_FILE   = FRONTEND_DIR / "index.html"

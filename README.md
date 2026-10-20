@@ -25,6 +25,10 @@ Aplicación académica para **encontrar compañeros y sesiones de estudio**.
 - Recuperación de contraseña.
 - Cambio de contraseña mediante código de recuperación simulado.
 - No se necesita enviar correos reales.
+- Crear sesiones con materia, modalidad, fecha y capacidad total.
+- Unirse a sesiones futuras con inscripciones abiertas y cupos libres.
+- Buscar por nombre y combinar filtros de materia, modalidad, fechas y disponibilidad.
+- Conservar los filtros en la URL y las inscripciones en SQLite al recargar.
 
 ## 1. Ejecutar el backend
 
@@ -86,8 +90,29 @@ La aplicación estará disponible normalmente en:
 10. El sistema mostrará un código simulado.
 11. Introduce ese código y una nueva contraseña.
 
-## Importante
+## Inscripciones y filtros
 
-Este proyecto usa una estructura de usuarios **en memoria** para que sea sencillo de ejecutar y entender. Si reinicias FastAPI, los usuarios registrados se borran.
+Para probar una inscripción, crea una sesión con una cuenta y entra con otra. El creador no puede inscribirse en su propia sesión. El listado muestra los cupos libres y explica los bloqueos.
 
-Para un proyecto real, los usuarios deberían guardarse en una base de datos y la recuperación de contraseña debería utilizar un sistema seguro de tokens enviados por correo.
+`cupo` es la capacidad total. Los lugares libres se calculan restando las inscripciones. Solo se permite unirse si la fecha es posterior a hoy, usando la fecha de Bolivia. El filtro «Hoy» permite consultar esas sesiones, pero no inscribirse en ellas. «Próximos 7 días» va desde mañana hasta dentro de siete días, inclusive.
+
+Los usuarios, sesiones e inscripciones se guardan en `backend/data/studymatch.db`. Al arrancar se agrega la columna `materia` si falta; las sesiones anteriores quedan con la materia «General». No se borran sus datos.
+
+El listado y las inscripciones requieren un usuario autenticado. La recuperación de contraseña sigue siendo una demostración con código en pantalla.
+
+Para estudiar el código:
+
+- `backend/app/repositorio.py`: `motivo_para_unirse` contiene la regla; `unirse_a_sesion` guarda la inscripción; `buscar_sesiones` consulta y filtra los datos.
+- `backend/app/routes.py`: recibe las peticiones y obtiene el usuario del token.
+- `frontend/src/SesionsPage.jsx`: filtros, listado y botón «Unirme».
+- `frontend/src/CreateSesionPage.jsx`: formulario para crear sesiones.
+
+## Pruebas
+
+Desde `backend`, con el entorno virtual activado:
+
+```bash
+python -m unittest discover -s tests -t . -v
+```
+
+Las pruebas usan bases aisladas. Comprueban acceso, inscripciones, cupos, filtros, persistencia y dos intentos simultáneos por el último cupo.

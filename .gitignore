@@ -49,3 +49,8 @@ proyecto_2.code-workspace
 Thumbs.db
 Desktop.ini
 
+design
+
+# Datos locales y archivos temporales de las pruebas visuales
+backend/data/*.db*
+backend/.evidencias_tmp/

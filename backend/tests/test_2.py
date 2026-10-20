@@ -1,62 +1,15 @@
-
-
-
-from datetime import date
-
-from app.database import sesiones
-
-
-import unittest
-
-from app.models import SesionDeEstudio
+from sqlalchemy.orm import Session
+from app.modelos_db import SesionEstudio
 from app.routes import cerrar_inscripciones, crear_sesion
+from tests.base_db import PruebaConBaseDeDatos
 
 
-class TestCerrarInscripciones(unittest.TestCase):
-
-    def setUp(self):
-        self.sesiones_anteriores = sesiones.copy()
-        sesiones.clear()
-
-
-    def tearDown(self):
-        sesiones.clear()
-        sesiones.update(self.sesiones_anteriores)
-
-    # 1. preparar
-    # 2. actuar
-    # 3. comprobar
+class TestCerrarInscripciones(PruebaConBaseDeDatos):
     def test_cerrar_inscripciones(self):
-        data = SesionDeEstudio(
-            nombre="sesion fisica",
-            fecha=date(2026, 10, 20),
-            modalidad="prescencial",
-            cupo="5",
-            inscripciones=True,
-        )
-
-        crear_sesion(data)
-
-        self.assertIs(
-            sesiones["sesion fisica"]["inscripciones"],
-            True,
-            "antes de cerrar, la sesion debe estar abierta",
-        )
-
-        data_para_cerrar = SesionDeEstudio(
-            nombre="sesion fisica",
-            fecha=date(2026, 10, 20),
-            modalidad="prescencial",
-            cupo="5",
-            inscripciones=False,
-        )
-
-        cerrar_inscripciones(data_para_cerrar)
-
-        sesion_guardada = sesiones["sesion fisica"]
-
-        self.assertIs(
-            sesion_guardada["inscripciones"],
-            False,
-            "despues de cerrar, las inscripciones deben quedar cerradas",
-        )
+        resultado = crear_sesion(self.datos_sesion(), self.db, self.usuario)
+        cerrar_inscripciones(self.datos_sesion(False), self.db, self.usuario)
+        with Session(self.engine) as db:
+            sesion = db.get(SesionEstudio, resultado["id"])
+            self.assertIs(sesion.inscripciones_abiertas, False)
+            self.assertEqual(sesion.nombre, "Repaso de fisica")
+            self.assertEqual(sesion.cupo, 5)

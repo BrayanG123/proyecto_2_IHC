@@ -7,7 +7,10 @@ from app.config import ALGORITHM, SECRET_KEY, TOKEN_EXPIRE_HOURS
 
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from app.database import usuarios
+from app.database import get_db
+from app.repositorio import get_user_by_email # usuarios
+from sqlalchemy.orm import Session
+
 
 security = HTTPBearer(auto_error=False)
 
@@ -27,10 +30,13 @@ def hash_password(password: str) -> str:
 
 
 def verificar_password(password: str, password_hash: str) -> bool:
-    return bcrypt.checkpw(
-        password.encode("utf-8"),
-        password_hash.encode("utf-8")
-    )
+    try:
+        return bcrypt.checkpw(
+            password.encode("utf-8"),
+            password_hash.encode("utf-8")
+        )
+    except ValueError:
+        return False
 
 
 # funciones de jwt
@@ -52,8 +58,11 @@ def crear_token(email: str) -> str:
     )
 
 
-def obtener_usuario_actual(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    
+def obtener_usuario_actual(
+    credentials: HTTPAuthorizationCredentials = Depends(security),
+    db: Session = Depends(get_db),
+):
+
     if credentials is None or credentials.scheme.lower() != "bearer":
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -69,18 +78,28 @@ def obtener_usuario_actual(credentials: HTTPAuthorizationCredentials = Depends(s
             algorithms=[ALGORITHM]
         )
 
-        email = payload.get("sub")
-
-        if not email or email not in usuarios:
+    except JWTError:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="sesion no válida"
+                detail="token invalido o expirado"
             )
 
-        return usuarios[email]
+    email = payload.get("sub")
 
-    except JWTError:
+
+    if not isinstance(email, str) or not email:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="token invalido o expirado"
+            detail="Sesión no válida",
         )
+
+    usuario = get_user_by_email(db, email)
+
+
+    if usuario is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="El usuario de esta sesión ya no existe",
+        )
+
+    return usuario

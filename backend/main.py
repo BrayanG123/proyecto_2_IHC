@@ -1,11 +1,11 @@
 
-from datetime import datetime, timedelta, timezone
-from pathlib import Path
+from contextlib import asynccontextmanager
 
-from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
-from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+from app.config import ALLOWED_ORIGINS, FRONTEND_DIR, INDEX_FILE
+from app.database import inicializar_db
 
 from app.routes import router
 
@@ -14,18 +14,21 @@ from app.routes import router
 # CONFIGURACIÓN
 # ============================================================
 
+@asynccontextmanager
+async def lifespan(app):
+    inicializar_db()
+    yield
+
+
 app = FastAPI(
     title="StudyMatch API",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        # "*"
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -33,7 +36,6 @@ app.add_middleware(
 
 app.include_router(router)
 
-security = HTTPBearer(auto_error=False)
 
 
 # ============================================================
@@ -74,7 +76,9 @@ def servir_react(full_path: str):
     """
 
     # Primero comprobamos si existe un archivo físico.
-    archivo = FRONTEND_DIR / full_path
+    archivo = (FRONTEND_DIR / full_path).resolve()
+    if not archivo.is_relative_to(FRONTEND_DIR.resolve()):
+        raise HTTPException(status_code=404, detail="Archivo no encontrado.")
 
     if archivo.is_file():
         return FileResponse(archivo)
