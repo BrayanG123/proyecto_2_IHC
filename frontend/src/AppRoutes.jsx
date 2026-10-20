@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard";
 import Home from "./Home";
 import Recover from "./Recover";
 import { Login, Register } from "./Auth";
+import HistorialPage from "./HistorialPage";
 
 
 
@@ -41,6 +42,8 @@ export default function AppRoutes({user, checking, onLogin}) {
                 />
                 <Route path="/new-study" element={<CreateSesionPage />} />
                 <Route path="/sesions" element={<SesionsPage />} />
+
+                <Route path="/historial" element={<HistorialPage />} />
             </Route>
 
             <Route path="*" element={<Navigate to="/" replace />} />

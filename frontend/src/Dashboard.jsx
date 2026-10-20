@@ -35,11 +35,23 @@ export default function Dashboard({ user }) {
             </div> */}
 
             <p className="text-center mt-3 mb-0">
-              <Link to="/new-study">Crear nueva sesion</Link>
+              <Link to="/new-study">
+                Crear nueva sesion
+              </Link>
             </p>
             <br />
+
             <p className="text-center mt-3 mb-0">
-              <Link to="/sesions">Ir a Sesiones</Link>
+              <Link to="/sesions">
+                Ir a Sesiones
+              </Link>
+            </p>
+            <br />
+
+            <p className="text-center mt-3 mb-0">
+              <Link to="/historial" className="btn btn-primary">
+                Mi historial
+              </Link>
             </p>
 
           </div>
