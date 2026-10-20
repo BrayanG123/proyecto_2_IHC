@@ -218,6 +218,7 @@ export default function SesionsPage() {
                   <p>Modalidad: {sesion.modalidad}</p>
                   <p>Cupos disponibles: {sesion.cupos_disponibles} de {sesion.cupo}</p>
                   <p>Fecha: {formatearFecha(sesion.fecha)}</p>
+                  <p>{sesion.inscripciones_abiertas ? "Inscripciones abiertas" : "Inscripciones cerradas"}</p>
                   {sesion.motivo && <p className="text-secondary">{sesion.motivo}</p>}
                   <button className="btn btn-primary mt-auto" disabled={!sesion.puede_unirse || inscribiendo !== null}
                           onClick={() => unirse(sesion.id)}>
